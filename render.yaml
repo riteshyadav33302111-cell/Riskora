@@ -9,4 +9,6 @@ services:
     envVars:
       - key: PYTHONPATH
         value: .
+      - key: PYTHON_VERSION
+        value: 3.11.9
     healthCheckPath: /health
