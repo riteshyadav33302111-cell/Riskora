@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-navy-950 text-white font-sans antialiased;
+    background-color: #030927;
+    background-image:
+      linear-gradient(rgba(139, 92, 246, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(139, 92, 246, 0.04) 1px, transparent 1px);
+    background-size: 32px 32px;
+    min-height: 100vh;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #060f52;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #3845b2;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #8b5cf6;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply backdrop-blur-sm border border-white/10 rounded-2xl;
+    background: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%);
+  }
+
+  .cyber-btn {
+    @apply relative inline-flex items-center justify-center px-6 py-3 font-semibold
+           rounded-xl transition-all duration-200 select-none cursor-pointer;
+  }
+
+  .cyber-btn-primary {
+    @apply cyber-btn bg-gradient-to-r from-violet-600 to-cyan-600
+           hover:from-violet-500 hover:to-cyan-500
+           shadow-lg hover:shadow-violet-500/25
+           text-white;
+  }
+
+  .cyber-btn-primary:active {
+    transform: scale(0.98);
+  }
+
+  .cyber-input {
+    @apply w-full bg-navy-900/80 border border-white/15 rounded-xl px-4 py-3
+           text-white placeholder-slate-400 font-mono text-sm
+           focus:outline-none focus:ring-2 focus:ring-violet-500/50 focus:border-violet-500/50
+           transition-all duration-200;
+  }
+
+  .risk-badge-high {
+    @apply px-3 py-1 rounded-full text-xs font-semibold bg-red-500/20 text-red-400
+           border border-red-500/30;
+  }
+
+  .risk-badge-medium {
+    @apply px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/20 text-amber-400
+           border border-amber-500/30;
+  }
+
+  .risk-badge-low {
+    @apply px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-400
+           border border-emerald-500/30;
+  }
+
+  .stat-card {
+    @apply glass-card p-6 flex flex-col gap-2;
+  }
+
+  .section-heading {
+    @apply text-2xl font-bold text-white mb-1;
+  }
+
+  .section-subheading {
+    @apply text-slate-400 text-sm mb-6;
+  }
+
+  /* Scan animation */
+  .scan-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .scan-container::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #8b5cf6, #06b6d4, transparent);
+    animation: scanLine 2s linear infinite;
+    pointer-events: none;
+  }
+}
+
+@layer utilities {
+  .text-gradient-purple-cyan {
+    @apply bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent;
+  }
+
+  .text-gradient-red-orange {
+    @apply bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent;
+  }
+
+  .border-gradient {
+    border-image: linear-gradient(135deg, #8b5cf6, #06b6d4) 1;
+  }
+
+  .glow-purple {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+  }
+
+  .glow-cyan {
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+  }
+
+  .glow-red {
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.3);
+  }
+}
