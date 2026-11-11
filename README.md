@@ -11,7 +11,7 @@
 
 **A machine learning-powered web application that detects phishing URLs in real time, providing risk levels, confidence scores, and transparent explanations of suspicious indicators.**
 
-[Live Demo](#) · [API Docs (Live)](https://riskora-ukqr.onrender.com/docs) · [Dataset](#dataset)
+[Live Demo](https://riskora-dun.vercel.app/) · [API Docs (Live)](https://riskora-ukqr.onrender.com/docs) · [Dataset](#dataset)
 
 </div>
 
