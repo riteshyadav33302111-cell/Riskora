@@ -14,18 +14,25 @@ Key principles:
 
 from __future__ import annotations
 
+import os
 import json
 import sys
 from pathlib import Path
 from typing import Dict, Any, List
 from urllib.parse import urlparse
 
+# Ensure backend, ml, and root directory are always on sys.path
+BACKEND_DIR = Path(__file__).resolve().parent
+ROOT_DIR = BACKEND_DIR.parent
+ML_DIR = ROOT_DIR / "ml"
+
+for _p in (str(BACKEND_DIR), str(ML_DIR), str(ROOT_DIR)):
+    if _p not in sys.path:
+        sys.path.insert(0, _p)
+
 import joblib
 import numpy as np
 import pandas as pd
-
-ML_DIR = Path(__file__).parent.parent / "ml"
-sys.path.insert(0, str(ML_DIR))
 
 from feature_extraction import (  # noqa: E402
     extract_features,

@@ -19,8 +19,20 @@ Usage (development):
 
 from __future__ import annotations
 
+import os
+import sys
 import logging
+from pathlib import Path
 from contextlib import asynccontextmanager
+
+# Ensure backend, ml, and root directory are always on sys.path regardless of execution CWD
+BACKEND_DIR = Path(__file__).resolve().parent
+ROOT_DIR = BACKEND_DIR.parent
+ML_DIR = ROOT_DIR / "ml"
+
+for _p in (str(BACKEND_DIR), str(ML_DIR), str(ROOT_DIR)):
+    if _p not in sys.path:
+        sys.path.insert(0, _p)
 
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
