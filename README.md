@@ -9,7 +9,7 @@
 ![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1.6-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
 ![License: MIT](https://img.shields.io/badge/License-MIT-green?style=flat-square)
 
-**A machine learning-powered web application that detects phishing URLs in real time, providing risk levels, confidence scores, and transparent explanations of suspicious indicators.**
+**A machine learning-powered web application that detects phishing URLs in real time, providing risk levels, confidence scores, and transparent explanations of suspicious indicators..**
 
 [Live Demo](https://riskora-dun.vercel.app/) · [API Docs (Live)](https://riskora-ukqr.onrender.com/docs) · [Dataset](#dataset)
 
