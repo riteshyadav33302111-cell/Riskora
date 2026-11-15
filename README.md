@@ -50,7 +50,7 @@ Riskora is a full-stack cybersecurity application that uses machine learning to 
 
 ## 🚨 Problem Statement
 
-Phishing attacks remain one of the most prevalent cybersecurity threats globally. Attackers craft deceptive URLs that mimic legitimate websites to steal credentials, financial data, and personal information. Traditional blocklists are reactive; Riskora provides a proactive, ML-based heuristic layer of defence.
+Phishing attacks remain one of the most prevalent cybersecurity threats globally. Attackers craft deceptive URLs that mimic legitimate websites to steal credentials, financial data, and personal information. Traditional blocklists are reactive; Riskora provides a proactive, ML-based heuristic layer of defence..
 
 ---
 
