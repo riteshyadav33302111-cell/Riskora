@@ -147,7 +147,7 @@ Phishing attacks remain one of the most prevalent cybersecurity threats globally
 
 ### Feature Selection Strategy
 
-The dataset includes 54 features across two categories:
+The dataset includes 54 features across two categories::
 
 1. **URL-string features** (16 columns): Computed directly from the URL string — used for training and inference.
 2. **Webpage-content features** (38 columns): Require fetching the target page — **excluded** to prevent SSRF during inference.
